@@ -7,15 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: installer.py 1.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-22 17:25+0200\n"
-"PO-Revision-Date: 2015-07-22 17:23+0200\n"
-"Last-Translator: Automatically generated\n"
+"POT-Creation-Date: 2015-07-22 17:27+0200\n"
+"PO-Revision-Date: 2015-08-17 19:40+0200\n"
 "Language-Team: none\n"
-"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.4\n"
+"Last-Translator: \n"
+"Language: de\n"
 
 #: installer.py:30
 msgid "Install Packages?"
@@ -23,7 +24,7 @@ msgstr "Installiere Pakete?"
 
 #: installer.py:31
 msgid "You may want to use WiFi for this."
-msgstr "Vielleicht möchten Sie dazu das WLAN benutzen."
+msgstr "Vielleicht möchten WiFi dafür benutzen."
 
 #: installer.py:35
 msgid "Yes"
@@ -35,16 +36,16 @@ msgstr "Nein"
 
 #: installer.py:52
 msgid "Installing Packages..."
-msgstr "Installiere Pakete..."
+msgstr "Installieren von Paketen…"
 
 #: installer.py:53
 msgid "This should just take a moment."
-msgstr "Das sollte nur einen Moment dauern."
+msgstr "Dies dauert nur einen Moment."
 
 #: installer.py:84
 msgid "Some event data."
-msgstr ""
+msgstr "Etwas Ereignisdaten."
 
 #: installer.py:85
 msgid "Some other data."
-msgstr ""
+msgstr "Einige andere Daten."

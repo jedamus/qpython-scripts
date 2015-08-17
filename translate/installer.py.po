@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: installer.py 1.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-22 17:27+0200\n"
+"POT-Creation-Date: 2015-08-17 19:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Leander Jedamus <ljedamus@gmail.com>\n"
 "Language-Team: Leander Jedamus <ljedamus@gmail.com>\n"
@@ -17,34 +17,34 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: installer.py:30
+#: installer.py:89
 msgid "Install Packages?"
 msgstr ""
 
-#: installer.py:31
+#: installer.py:90
 msgid "You may want to use WiFi for this."
 msgstr ""
 
-#: installer.py:35
+#: installer.py:94
 msgid "Yes"
 msgstr ""
 
-#: installer.py:36
+#: installer.py:95
 msgid "No"
 msgstr ""
 
-#: installer.py:52
+#: installer.py:111
 msgid "Installing Packages..."
 msgstr ""
 
-#: installer.py:53
+#: installer.py:112
 msgid "This should just take a moment."
 msgstr ""
 
-#: installer.py:84
+#: installer.py:146
 msgid "Some event data."
 msgstr ""
 
-#: installer.py:85
+#: installer.py:147
 msgid "Some other data."
 msgstr ""
