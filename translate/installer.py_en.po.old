@@ -1,0 +1,50 @@
+# installer.py.
+# Copyright (C) 2015 Leander Jedamus
+# This file is distributed under the same license as the installer.py package.
+# ljedamus@gmail.com, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: installer.py 1.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-22 17:25+0200\n"
+"PO-Revision-Date: 2015-07-22 17:23+0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: installer.py:30
+msgid "Install Packages?"
+msgstr "Install Packages?"
+
+#: installer.py:31
+msgid "You may want to use WiFi for this."
+msgstr "You may want to use WiFi for this."
+
+#: installer.py:35
+msgid "Yes"
+msgstr "Yes"
+
+#: installer.py:36
+msgid "No"
+msgstr "No"
+
+#: installer.py:52
+msgid "Installing Packages..."
+msgstr "Installing Packages..."
+
+#: installer.py:53
+msgid "This should just take a moment."
+msgstr "This should just take a moment."
+
+#: installer.py:84
+msgid "Some event data."
+msgstr "Some event data."
+
+#: installer.py:85
+msgid "Some other data."
+msgstr "Some other data."
