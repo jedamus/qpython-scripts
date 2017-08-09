@@ -1,0 +1,186 @@
+# main.py.
+# Copyright (C) 2017 Leander Jedamus
+# This file is distributed under the same license as the main.py package.
+# ljedamus@testmail.com, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: main.py 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-08-09 20:34+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Leander Jedamus <ljedamus@testmail.com>\n"
+"Language-Team: Leander Jedamus <ljedamus@testmail.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: main.py:52
+msgid "Text-to-speech?"
+msgstr ""
+
+#: main.py:53
+msgid "Do you want speech output?"
+msgstr ""
+
+#: main.py:53 main.py:57 main.py:125
+msgid "Yes"
+msgstr ""
+
+#: main.py:53 main.py:57 main.py:125
+msgid "No"
+msgstr ""
+
+#: main.py:55
+msgid "Install Packages?"
+msgstr ""
+
+#: main.py:56
+msgid "You may want to use WiFi for this."
+msgstr ""
+
+#: main.py:62
+msgid "Installing Packages..."
+msgstr ""
+
+#: main.py:63
+msgid "This should just take a moment."
+msgstr ""
+
+#: main.py:88
+msgid "19 percent"
+msgstr ""
+
+#: main.py:88
+msgid "16 percent"
+msgstr ""
+
+#: main.py:88
+msgid "7 percent"
+msgstr ""
+
+#: main.py:94
+msgid "Please input data here:"
+msgstr ""
+
+#: main.py:95
+msgid "Send data"
+msgstr ""
+
+#: main.py:96
+msgid "First name"
+msgstr ""
+
+#: main.py:97
+msgid "Last name"
+msgstr ""
+
+#: main.py:98
+msgid "street"
+msgstr ""
+
+#: main.py:99
+msgid "nr."
+msgstr ""
+
+#: main.py:100
+msgid "postcode"
+msgstr ""
+
+#: main.py:101
+msgid "town"
+msgstr ""
+
+#: main.py:102
+msgid "telephone"
+msgstr ""
+
+#: main.py:103
+msgid "testing 123"
+msgstr ""
+
+#: main.py:109
+msgid "Do A"
+msgstr ""
+
+#: main.py:109
+msgid "Some event data."
+msgstr ""
+
+#: main.py:110
+msgid "Do B"
+msgstr ""
+
+#: main.py:110
+msgid "Some other data."
+msgstr ""
+
+#: main.py:111
+msgid "Quit"
+msgstr ""
+
+#: main.py:123
+msgid "Send as email?"
+msgstr ""
+
+#: main.py:124
+msgid "Do you want to send data as email?"
+msgstr ""
+
+#: main.py:136
+msgid "firstname:"
+msgstr ""
+
+#: main.py:137
+msgid "lastname:"
+msgstr ""
+
+#: main.py:138
+msgid "street:"
+msgstr ""
+
+#: main.py:139
+msgid "nr.:"
+msgstr ""
+
+#: main.py:140
+msgid "postcode:"
+msgstr ""
+
+#: main.py:141
+msgid "town:"
+msgstr ""
+
+#: main.py:142
+msgid "telephone:"
+msgstr ""
+
+#: main.py:145
+msgid "data:"
+msgstr ""
+
+#: main.py:153 main.py:160
+msgid "other"
+msgstr ""
+
+#: main.py:154
+msgid "send data from qpython"
+msgstr ""
+
+#: main.py:157
+msgid "Select recipient"
+msgstr ""
+
+#: main.py:157
+msgid "Cancel"
+msgstr ""
+
+#: main.py:162
+msgid "Email address"
+msgstr ""
+
+#: main.py:163
+msgid "Input email adress"
+msgstr ""

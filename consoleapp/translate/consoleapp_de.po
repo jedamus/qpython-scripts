@@ -1,0 +1,186 @@
+# main.py.
+# Copyright (C) 2017 Leander Jedamus
+# This file is distributed under the same license as the main.py package.
+# ljedamus@testmail.com, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: main.py 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-08-09 20:40+0200\n"
+"PO-Revision-Date: 2017-08-09 20:34+0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: main.py:52
+msgid "Text-to-speech?"
+msgstr "Sprachausgabe?"
+
+#: main.py:53
+msgid "Do you want speech output?"
+msgstr "Wollen Sie Sprachausgabe?"
+
+#: main.py:53 main.py:57 main.py:125
+msgid "Yes"
+msgstr "Ja"
+
+#: main.py:53 main.py:57 main.py:125
+msgid "No"
+msgstr "Nein"
+
+#: main.py:55
+msgid "Install Packages?"
+msgstr "Installiere Packete?"
+
+#: main.py:56
+msgid "You may want to use WiFi for this."
+msgstr "Vielleicht wollen Sie WLAN dafür."
+
+#: main.py:62
+msgid "Installing Packages..."
+msgstr "Installiere Packete..."
+
+#: main.py:63
+msgid "This should just take a moment."
+msgstr "Das sollte nur einen Moment dauern."
+
+#: main.py:88
+msgid "19 percent"
+msgstr "19 Prozent"
+
+#: main.py:88
+msgid "16 percent"
+msgstr "16 Prozent"
+
+#: main.py:88
+msgid "7 percent"
+msgstr "7 Prozent"
+
+#: main.py:94
+msgid "Please input data here:"
+msgstr "Bitte geben Sie here Daten ein:"
+
+#: main.py:95
+msgid "Send data"
+msgstr "Sende Daten"
+
+#: main.py:96
+msgid "First name"
+msgstr "Vorname"
+
+#: main.py:97
+msgid "Last name"
+msgstr "Nachname"
+
+#: main.py:98
+msgid "street"
+msgstr "Straße"
+
+#: main.py:99
+msgid "nr."
+msgstr "Nr."
+
+#: main.py:100
+msgid "postcode"
+msgstr "PLZ"
+
+#: main.py:101
+msgid "town"
+msgstr "Stadt"
+
+#: main.py:102
+msgid "telephone"
+msgstr "Telefon"
+
+#: main.py:103
+msgid "testing 123"
+msgstr "testing 123"
+
+#: main.py:109
+msgid "Do A"
+msgstr "Do A"
+
+#: main.py:109
+msgid "Some event data."
+msgstr "Einige Daten."
+
+#: main.py:110
+msgid "Do B"
+msgstr "Do B"
+
+#: main.py:110
+msgid "Some other data."
+msgstr "Einige andere Daten."
+
+#: main.py:111
+msgid "Quit"
+msgstr "Schließen"
+
+#: main.py:123
+msgid "Send as email?"
+msgstr "Sende als email?"
+
+#: main.py:124
+msgid "Do you want to send data as email?"
+msgstr "Wollen Sie die Daten als email versenden?"
+
+#: main.py:136
+msgid "firstname:"
+msgstr "Vorname:"
+
+#: main.py:137
+msgid "lastname:"
+msgstr "Nachname:"
+
+#: main.py:138
+msgid "street:"
+msgstr "Straße:"
+
+#: main.py:139
+msgid "nr.:"
+msgstr "Nr.:"
+
+#: main.py:140
+msgid "postcode:"
+msgstr "PLZ:"
+
+#: main.py:141
+msgid "town:"
+msgstr "Stadt:"
+
+#: main.py:142
+msgid "telephone:"
+msgstr "Telefon:"
+
+#: main.py:145
+msgid "data:"
+msgstr "Daten:"
+
+#: main.py:153 main.py:160
+msgid "other"
+msgstr "andere"
+
+#: main.py:154
+msgid "send data from qpython"
+msgstr "Sende Daten von Qpython aus"
+
+#: main.py:157
+msgid "Select recipient"
+msgstr "Wähle Empfänger"
+
+#: main.py:157
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: main.py:162
+msgid "Email address"
+msgstr "Email Adresse"
+
+#: main.py:163
+msgid "Input email adress"
+msgstr "Geben Sie die Email Adresse ein"
