@@ -2,7 +2,7 @@
 # coding: utf-8
 # qpy:2
 # ä
-# modifiziert Dienstag, 30. April 2019 12:15 von Leander Jedamus
+# modifiziert Dienstag, 30. April 2019 13:02 von Leander Jedamus
 
 from __future__ import print_function
 import locale
@@ -87,7 +87,7 @@ def output(heute, ostern, ds, tage, name):
 
 
 ds = "%A, der %d. %B %Y"
-if sys.platform == "linux2":
+if (sys.platform == "linux2") or (sys.platform == "darwin"):
   locale.setlocale(locale.LC_ALL, "de_DE.UTF-8")
     
 today = datetime.date.today()
