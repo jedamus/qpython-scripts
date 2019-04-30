@@ -1,8 +1,9 @@
+#!/usr/bin/python2
 #-*-coding:utf8;-*-
 #qpy:2
 #qpy:console
-# erzeugt Dienstag, 30. April 2019 13:29 (C) 2019 von Leander Jedamus
-# modifiziert Dienstag, 30. April 2019 14:51 von Leander Jedamus
+# erzeugt Dienstag, 30. April 2019 17:54 (C) 2019 von Leander Jedamus
+# modifiziert Dienstag, 30. April 2019 17:51 von Leander Jedamus
 
 from __future__ import print_function
 import sys
@@ -44,7 +45,7 @@ if __name__ == '__main__':
   suite.addTests((test1, test2))
   testrunner = unittest.TextTestRunner(verbosity=2, stream=sys.stderr)
   testrunner.run(suite)
-  print()
+  print("-" * 70)
   PrintAusgabe()
   
 # setUp() wird vor jedem Aufruf einer der Testmethoden gerufen und 
