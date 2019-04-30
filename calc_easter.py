@@ -1,7 +1,8 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # coding: utf-8
 # qpy:2
 # erzeugt Dienstag, 30. April 2019 13:29 (C) 2019 von Leander Jedamus
+# modifiziert Mittwoch, 01. Mai 2019 01:03 von Leander Jedamus
 # modifiziert Dienstag, 30. April 2019 17:59 von Leander Jedamus
 
 from __future__ import print_function
