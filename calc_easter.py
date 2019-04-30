@@ -2,11 +2,12 @@
 # coding: utf-8
 # qpy:2
 # ä
-# modifiziert Dienstag, 30. April 2019 08:42 von Leander Jedamus
+# modifiziert Dienstag, 30. April 2019 12:03 von Leander Jedamus
 
 from __future__ import print_function
 import locale
 import datetime
+import sys
 
 def calc_easter(year):
     "Returns Easter as a date object."
@@ -21,11 +22,31 @@ def calc_easter(year):
     
     return datetime.date(year, month, day)
 
-    
+def get_datum(datum,ds):
+    s = datum.strftime(ds)
+    if sys.platform == "linux4":
+      months = ["January", "February", "March", "April", "May",
+                "June", "July", "August", "September", "October",
+                "November", "December"]
+      monate = ["Januar", "Februar", "März", "April", "Mai",
+                "Juni", "Juli", "August", "September", "Oktober",
+                "November", "Dezember"];
+      for i in range(0,12):
+        #print(months[i], " = ", monate[i])
+        s = s.replace(months[i], monate[i])
+      days = ["Sunday", "Monday", "Tuesday", "Wednesday",
+              "Thursday", "Friday", "Saturday"]
+      tage = ["Sonntag", "Montag", "Dienstag", "Mittwoch",
+              "Donnerstag", "Freitag", "Samstag"]
+      for i in range(0,7):
+        #print(days[i], " = ", tage[i])
+        s = s.replace(days[i], tage[i])
+    return s
+
 def output1(ostern, ds, tage, name):
     days = datetime.timedelta(days=tage)
     datum = ostern + days
-    print(name + " ist am " + datum.strftime(ds), end=". ")
+    print(name + " ist am " + get_datum(datum,ds), end=". ")
 
     
 def output2(heute, ostern, tage, name):
@@ -66,10 +87,11 @@ def output(heute, ostern, ds, tage, name):
 
 
 ds = "%A, der %d. %B %Y"
-locale.setlocale(locale.LC_ALL, "de_DE.UTF-8")
+if sys.platform == "linux2":
+  locale.setlocale(locale.LC_ALL, "de_DE.UTF-8")
     
 today = datetime.date.today()
-print("Heute ist " + today.strftime(ds))
+print("Heute ist " + get_datum(today+datetime.timedelta(days=1),ds))
 year = today.year
 #year = 2016
 
