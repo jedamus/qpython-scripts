@@ -1,8 +1,8 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # coding: utf-8
 # qpy:2
 # erzeugt Dienstag, 30. April 2019 13:29 (C) 2019 von Leander Jedamus
-# modifiziert Dienstag, 30. April 2019 13:44 von Leander Jedamus
+# modifiziert Dienstag, 30. April 2019 17:59 von Leander Jedamus
 
 from __future__ import print_function
 import locale
@@ -67,7 +67,7 @@ def output(heute, ostern, ds, tage, name):
 
 
 ds = "%A, der %d. %B %Y"
-if (sys.platform == "linux2") or (sys.platform == "darwin"):
+if (sys.platform in ["linux", "linux2", "darwin"]):
   locale.setlocale(locale.LC_ALL, "de_DE.UTF-8")
     
 today = datetime.date.today()
