@@ -2,7 +2,7 @@
 # coding: utf-8
 # qpy:2
 # ä
-# modifiziert Dienstag, 30. April 2019 12:03 von Leander Jedamus
+# modifiziert Dienstag, 30. April 2019 12:15 von Leander Jedamus
 
 from __future__ import print_function
 import locale
@@ -91,7 +91,7 @@ if sys.platform == "linux2":
   locale.setlocale(locale.LC_ALL, "de_DE.UTF-8")
     
 today = datetime.date.today()
-print("Heute ist " + get_datum(today+datetime.timedelta(days=1),ds))
+print("Heute ist " + get_datum(today,ds) + ".")
 year = today.year
 #year = 2016
 
