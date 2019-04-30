@@ -2,7 +2,7 @@
 # coding: utf-8
 # ä
 # erzeugt Dienstag, 30. April 2019 13:29 (C) 2019 von Leander Jedamus
-# modifiziert Dienstag, 30. April 2019 13:43 von Leander Jedamus
+# modifiziert Dienstag, 30. April 2019 18:10 von Leander Jedamus
 
 import datetime
 from get_datum import get_datum
@@ -14,7 +14,7 @@ day1 = datetime.timedelta (days=1)
 
 import sys
 import locale
-if (sys.platform == "linux2") or (sys.platform == "darwin"):
+if (sys.platform in ["linux", "linux2", "darwin"]):
   locale.setlocale(locale.LC_ALL, "de_DE.UTF-8")
 
 while datum.weekday() > 4:
