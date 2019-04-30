@@ -2,7 +2,7 @@
 # coding: utf-8
 # qpy:2
 # ä
-# modifiziert Dienstag, 30. April 2019 08:40 von Leander Jedamus
+# modifiziert Dienstag, 30. April 2019 08:42 von Leander Jedamus
 
 from __future__ import print_function
 import locale
@@ -20,7 +20,6 @@ def calc_easter(year):
     day = f % 31 + 1
     
     return datetime.date(year, month, day)
-    #, 0, 0, tzinfo=get_timezone('Europe/Berlin'))
 
     
 def output1(ostern, ds, tage, name):
