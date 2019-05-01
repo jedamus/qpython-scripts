@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: main.py 1.0\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-09 20:40+0200\n"
+"Report-Msgid-Bugs-To: Leander Jedamus <ljedamus@web.de>\n"
+"POT-Creation-Date: 2019-05-01 02:37+0200\n"
 "PO-Revision-Date: 2017-08-09 20:34+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -17,170 +17,170 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: main.py:52
+#: main.py:53
 msgid "Text-to-speech?"
 msgstr "Text-to-speech?"
 
-#: main.py:53
+#: main.py:54
 msgid "Do you want speech output?"
 msgstr "Do you want speech output?"
 
-#: main.py:53 main.py:57 main.py:125
+#: main.py:54 main.py:58 main.py:126
 msgid "Yes"
 msgstr "Yes"
 
-#: main.py:53 main.py:57 main.py:125
+#: main.py:54 main.py:58 main.py:126
 msgid "No"
 msgstr "No"
 
-#: main.py:55
+#: main.py:56
 msgid "Install Packages?"
 msgstr "Install Packages?"
 
-#: main.py:56
+#: main.py:57
 msgid "You may want to use WiFi for this."
 msgstr "You may want to use WiFi for this."
 
-#: main.py:62
+#: main.py:63
 msgid "Installing Packages..."
 msgstr "Installing Packages..."
 
-#: main.py:63
+#: main.py:64
 msgid "This should just take a moment."
 msgstr "This should just take a moment."
 
-#: main.py:88
+#: main.py:89
 msgid "19 percent"
 msgstr "19 percent"
 
-#: main.py:88
+#: main.py:89
 msgid "16 percent"
 msgstr "16 percent"
 
-#: main.py:88
+#: main.py:89
 msgid "7 percent"
 msgstr "7 percent"
 
-#: main.py:94
+#: main.py:95
 msgid "Please input data here:"
 msgstr "Please input data here:"
 
-#: main.py:95
+#: main.py:96
 msgid "Send data"
 msgstr "Send data"
 
-#: main.py:96
+#: main.py:97
 msgid "First name"
 msgstr "First name"
 
-#: main.py:97
+#: main.py:98
 msgid "Last name"
 msgstr "Last name"
 
-#: main.py:98
+#: main.py:99
 msgid "street"
 msgstr "street"
 
-#: main.py:99
+#: main.py:100
 msgid "nr."
 msgstr "nr."
 
-#: main.py:100
+#: main.py:101
 msgid "postcode"
 msgstr "postcode"
 
-#: main.py:101
+#: main.py:102
 msgid "town"
 msgstr "town"
 
-#: main.py:102
+#: main.py:103
 msgid "telephone"
 msgstr "telephone"
 
-#: main.py:103
+#: main.py:104
 msgid "testing 123"
 msgstr "testing 123"
 
-#: main.py:109
+#: main.py:110
 msgid "Do A"
 msgstr "Do A"
 
-#: main.py:109
+#: main.py:110
 msgid "Some event data."
 msgstr "Some event data."
 
-#: main.py:110
+#: main.py:111
 msgid "Do B"
 msgstr "Do B"
 
-#: main.py:110
+#: main.py:111
 msgid "Some other data."
 msgstr "Some other data."
 
-#: main.py:111
+#: main.py:112
 msgid "Quit"
 msgstr "Quit"
 
-#: main.py:123
+#: main.py:124
 msgid "Send as email?"
 msgstr "Send as email?"
 
-#: main.py:124
+#: main.py:125
 msgid "Do you want to send data as email?"
 msgstr "Do you want to send data as email?"
 
-#: main.py:136
+#: main.py:137
 msgid "firstname:"
 msgstr "firstname:"
 
-#: main.py:137
+#: main.py:138
 msgid "lastname:"
 msgstr "lastname:"
 
-#: main.py:138
+#: main.py:139
 msgid "street:"
 msgstr "street:"
 
-#: main.py:139
+#: main.py:140
 msgid "nr.:"
 msgstr "nr.:"
 
-#: main.py:140
+#: main.py:141
 msgid "postcode:"
 msgstr "postcode:"
 
-#: main.py:141
+#: main.py:142
 msgid "town:"
 msgstr "town:"
 
-#: main.py:142
+#: main.py:143
 msgid "telephone:"
 msgstr "telephone:"
 
-#: main.py:145
+#: main.py:146
 msgid "data:"
 msgstr "data:"
 
-#: main.py:153 main.py:160
+#: main.py:154 main.py:161
 msgid "other"
 msgstr "other"
 
-#: main.py:154
+#: main.py:155
 msgid "send data from qpython"
 msgstr "send data from qpython"
 
-#: main.py:157
+#: main.py:158
 msgid "Select recipient"
 msgstr "Select recipient"
 
-#: main.py:157
+#: main.py:158
 msgid "Cancel"
 msgstr "Cancel"
 
-#: main.py:162
+#: main.py:163
 msgid "Email address"
 msgstr "Email address"
 
-#: main.py:163
+#: main.py:164
 msgid "Input email adress"
 msgstr "Input email adress"
