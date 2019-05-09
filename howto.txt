@@ -1,6 +1,7 @@
+# exec open ('/storage/emulated/0/com.hipipal.qpyplus/scripts/howto.txt')
 from __future__ import print_function
 import os
 os.chdir('/storage/emulated/0/com.hipipal.qpyplus/scripts')
-exec open('sqr.py')
+from sqr import sqr
 print('>>> sqr(9)')
 print(sqr(9))
