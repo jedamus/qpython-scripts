@@ -1,8 +1,8 @@
-#-*-coding:utf-8;-*-
+#-*- coding: utf-8 -*-
 #qpy:3
 #qpy:console
 # erzeugt Mittwoch, 22. Juli 2015 17:05 von Leander Jedamus
-# modifiziert Montag, 13. Mai 2019 12:30 von Leander Jedamus
+# modifiziert Montag, 13. Mai 2019 16:38 von Leander Jedamus
 # modifiziert Mittwoch, 01. Mai 2019 01:51 von Leander Jedamus
 # modifiziert Montag, 27. Juli 2015 13:04 von Leander Jedamus
 # modifiziert Samstag, 25. Juli 2015 20:43 von Leander Jedamus
@@ -38,8 +38,7 @@ short_languages = ["en","de"]
 droid = android.Android()
  
 handler1 = logging.StreamHandler(sys.stdout)
-handler2 = logging.FileHandler("myapp.log","w","utf-8",True)
-
+handler2 = logging.FileHandler("myapp.log","w")
 logging.Formatter.converter=time.gmtime
 logging._srcFile=None
 logging.logThreads=0
@@ -51,13 +50,13 @@ handler1.setFormatter(frm)
 handler2.setFormatter(frm)
 
 logger = logging.getLogger(__name__)
-#logger.addHandler(handler1)
+logger.addHandler(handler1)
 logger.addHandler(handler2)
 logger.setLevel(logging.DEBUG)
 
-#dialogs.addHandler(handler1)
+dialogs.addHandler(handler1)
 dialogs.addHandler(handler2)
-log.addFilter(logger)
+# log.addFilter(logger)
 
 # user has to select language
 lang_index = ListDialog(droid,"Select language",languages,"Cancel")
@@ -74,8 +73,11 @@ else:
 scriptpath = os.path.abspath(os.path.dirname(sys.argv[0]))  
 try:
     trans = gettext.translation("myapp", \
-    	        os.path.join(scriptpath, "translate"))
-    trans.install(unicode=True)
+    	        os.path.join(scriptpath, "translate"),None,None,False,"utf-8")
+    # trans.set_output_charset("utf-8")
+    trans.install("utf-8")
+    
+    print(trans.output_charset())
 except IOError:
     def _ (s):
         return s
@@ -200,6 +202,9 @@ while True:
                         break
                     else:
                   	      to = result
+                if logger.isEnabledFor(logging.DEBUG):
+                    logger.debug("to = %s, subject = %s, getEmailBody = %s",
+                    	           to, subject, getEmailBody())
                 droid.sendEmail(to,subject,getEmailBody())
         #print(resp)
         break
@@ -217,7 +222,4 @@ while True:
 	    droid.fullSetProperty("telefon","text","+49 2651 41563")
     elif res['data'].has_key('id'):
 	if res['data']['id'] == "button1":
-          droid.fullSetProperty("button1","textColor","#ffffff")
-          droid.fullSetProperty("button1","background","#000000")
-	    
- 
+          droid.fullSetProperty("button1",

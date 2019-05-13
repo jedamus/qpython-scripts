@@ -2,7 +2,7 @@
 #qpy:3
 #qpy:console
 # erzeugt Mittwoch, 22. Juli 2015 17:05 von Leander Jedamus
-# modifiziert Montag, 13. Mai 2019 12:19 von Leander Jedamus
+# modifiziert Montag, 13. Mai 2019 18:29 von Leander Jedamus
 # modifiziert Montag, 27. Juli 2015 13:04 von Leander Jedamus
 # modifiziert Samstag, 25. Juli 2015 20:43 von Leander Jedamus
 # modifiziert Freitag, 24. Juli 2015 20:24 von Leander Jedamus
@@ -31,13 +31,14 @@ def t(droid,speak,send,*seq):
     logger.debug("t")
 
   global email
-  s = ' '.join(seq).encode('utf-8')
+  s = ' '.join(seq)
+  s2 = ' '.join(seq).encode('utf-8')
   if speak:
     droid.ttsSpeak(s)
     if logger.isEnabledFor(logging.DEBUG):
       logger.debug("speaking: " + s)
   if send:
-    email = email + s + "\n"
+    email = email + s2 + "\n"
   return s
   
 def Speaking(droid,speak,*seq):
