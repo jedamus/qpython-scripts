@@ -2,7 +2,7 @@
 #qpy:3
 #qpy:console
 # erzeugt Mittwoch, 22. Juli 2015 17:05 von Leander Jedamus
-# modifiziert Montag, 13. Mai 2019 09:38 von Leander Jedamus
+# modifiziert Montag, 13. Mai 2019 11:04 von Leander Jedamus
 # modifiziert Montag, 27. Juli 2015 13:04 von Leander Jedamus
 # modifiziert Samstag, 25. Juli 2015 20:43 von Leander Jedamus
 # modifiziert Freitag, 24. Juli 2015 20:24 von Leander Jedamus
@@ -15,8 +15,10 @@ import log
 logger = logging.getLogger(__name__)
 log.addFilter(logger)
 logger.setLevel(logging.DEBUG)
+logger.addHandler(logging.NullHandler())
 
 def addHandler(handler):
+  logger.removeHandler(logging.NullHandler())
   logger.addHandler(handler)
 
 email = ""
