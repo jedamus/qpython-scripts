@@ -2,7 +2,7 @@
 #qpy:3
 #qpy:console
 # erzeugt Mittwoch, 22. Juli 2015 17:05 von Leander Jedamus
-# modifiziert Montag, 13. Mai 2019 10:06 von Leander Jedamus
+# modifiziert Montag, 13. Mai 2019 21:16 von Leander Jedamus
 # modifiziert Mittwoch, 01. Mai 2019 01:51 von Leander Jedamus
 # modifiziert Montag, 27. Juli 2015 13:04 von Leander Jedamus
 # modifiziert Samstag, 25. Juli 2015 20:43 von Leander Jedamus
@@ -12,6 +12,7 @@
 from __future__ import print_function
 import atexit
 import logging
+import logging.config
 import sys
 import os
 import gettext
@@ -37,24 +38,14 @@ short_languages = ["en","de"]
 # create the droid
 droid = android.Android()
  
-handler1 = logging.StreamHandler(sys.stdout)
-handler2 = logging.FileHandler("myapp.log","w","utf-8",True)
-
 logging.Formatter.converter=time.gmtime
-frm = logging.Formatter("%(asctime)s %(name)s %(levelname)s: %(message)s",
-                        "%d.%m.%Y %H:%M:%S %Z")
-
-handler1.setFormatter(frm)
-handler2.setFormatter(frm)
-
+logging._srcFile=None
+logging.logThreads=0
+logging.logProcesses=0
+logging.config.fileConfig("logging.conf")
 logger = logging.getLogger(__name__)
-#logger.addHandler(handler1)
-logger.addHandler(handler2)
-logger.setLevel(logging.DEBUG)
 
-#dialogs.addHandler(handler1)
-dialogs.addHandler(handler2)
-log.addFilter(logger)
+# log.addFilter(logger)
 
 # user has to select language
 lang_index = ListDialog(droid,"Select language",languages,"Cancel")
@@ -64,13 +55,14 @@ else:
     # write selected language into environment, so gettext knows,
     # what language to choose
     os.environ["LANG"] = short_languages[lang_index]
-    logger.debug("main: language = " + short_languages[lang_index]
-                 + " (" + languages[lang_index] + ")")
+    if logger.isEnabledFor(logging.DEBUG):
+        logger.debug("main: language = " + short_languages[lang_index]
+                     + " (" + languages[lang_index] + ")")
     
 scriptpath = os.path.abspath(os.path.dirname(sys.argv[0]))  
 try:
     trans = gettext.translation("myapp", \
-    	        os.path.join(scriptpath, "translate"))
+    	        os.path.join(scriptpath, "translate"),None,None,False,"utf-8")
     trans.install(unicode=True)
 except IOError:
     def _ (s):
@@ -195,13 +187,19 @@ while True:
                     if result == None:
                         break
                     else:
-                  	      to = result
+                        to = result
+		if logger.isEnabledFor(logging.DEBUG):
+		    logger.debug("to = %s, subject = %s, getEmailBody = %s",
+		                 to, subject, getEmailBody())
                 droid.sendEmail(to,subject,getEmailBody())
         #print(resp)
         break
  
     # Otherwise, print the event data
     if (res['name'] == 'a_event') or (res ['name'] == 'b_event'):
+        if logger.isEnabledFor(logging.DEBUG):
+	    logger.debug("event name = %s, event data = %s", res['name'],
+	                 res['data'])
         print(res['data'])
 	if res['name'] == 'a_event':
 	    droid.fullSetProperty("vorname","text","Leander")
@@ -216,4 +214,67 @@ while True:
           droid.fullSetProperty("button1","textColor","#ffffff")
           droid.fullSetProperty("button1","background","#000000")
 	    
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
