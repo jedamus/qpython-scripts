@@ -1,8 +1,13 @@
-#-*-coding:utf-8;-*-
+#-*- coding: utf-8 -*-
 #qpy:3
 #qpy:console
 # erzeugt Mittwoch, 22. Juli 2015 17:05 von Leander Jedamus
+# modifiziert Montag, 13. Mai 2019 21:27 von Leander Jedamus
+<<<<<<< HEAD
 # modifiziert Montag, 13. Mai 2019 21:16 von Leander Jedamus
+=======
+# modifiziert Montag, 13. Mai 2019 16:38 von Leander Jedamus
+>>>>>>> b779b39e41c0734bd05a2e4b4a04700c82e29d7e
 # modifiziert Mittwoch, 01. Mai 2019 01:51 von Leander Jedamus
 # modifiziert Montag, 27. Juli 2015 13:04 von Leander Jedamus
 # modifiziert Samstag, 25. Juli 2015 20:43 von Leander Jedamus
@@ -38,10 +43,16 @@ short_languages = ["en","de"]
 # create the droid
 droid = android.Android()
  
+<<<<<<< HEAD
+=======
+handler1 = logging.StreamHandler(sys.stdout)
+handler2 = logging.FileHandler("myapp.log","w")
+>>>>>>> b779b39e41c0734bd05a2e4b4a04700c82e29d7e
 logging.Formatter.converter=time.gmtime
 logging._srcFile=None
 logging.logThreads=0
 logging.logProcesses=0
+<<<<<<< HEAD
 logging.config.fileConfig("logging.conf")
 logger = logging.getLogger(__name__)
 
@@ -63,7 +74,11 @@ scriptpath = os.path.abspath(os.path.dirname(sys.argv[0]))
 try:
     trans = gettext.translation("myapp", \
     	        os.path.join(scriptpath, "translate"),None,None,False,"utf-8")
+    # trans.set_output_charset("utf-8")
     trans.install(unicode=True)
+    
+    # print(trans.output_charset())
+
 except IOError:
     def _ (s):
         return s
