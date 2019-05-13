@@ -2,7 +2,7 @@
 #qpy:3
 #qpy:console
 # erzeugt Mittwoch, 22. Juli 2015 17:05 von Leander Jedamus
-# modifiziert Montag, 13. Mai 2019 05:24 von Leander Jedamus
+# modifiziert Montag, 13. Mai 2019 06:56 von Leander Jedamus
 # modifiziert Mittwoch, 01. Mai 2019 01:51 von Leander Jedamus
 # modifiziert Montag, 27. Juli 2015 13:04 von Leander Jedamus
 # modifiziert Samstag, 25. Juli 2015 20:43 von Leander Jedamus
@@ -36,8 +36,8 @@ short_languages = ["en","de"]
 droid = android.Android()
  
 #handler1 = logging.StreamHandler(sys.stdout)
-handler2 = logging.FileHandler("logger.log","w")
-
+handler2 = logging.FileHandler("myapp.log","w")
+7
 frm = logging.Formatter("%(asctime)s %(levelname)s: %(message)s",
                         "%d.%m.%Y %H:%M:%S")
 #handler1.setFormatter(frm)
@@ -56,6 +56,8 @@ else:
     # write selected language into environment, so gettext knows,
     # what language to choose
     os.environ["LANG"] = short_languages[lang_index]
+    logger.debug("main: language = " + short_languages[lang_index]
+                 + " (" + languages[lang_index] + ")")
     
 scriptpath = os.path.abspath(os.path.dirname(sys.argv[0]))  
 try:
