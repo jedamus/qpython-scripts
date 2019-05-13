@@ -2,7 +2,7 @@
 #qpy:3
 #qpy:console
 # erzeugt Mittwoch, 22. Juli 2015 17:05 von Leander Jedamus
-# modifiziert Montag, 13. Mai 2019 09:40 von Leander Jedamus
+# modifiziert Montag, 13. Mai 2019 10:06 von Leander Jedamus
 # modifiziert Mittwoch, 01. Mai 2019 01:51 von Leander Jedamus
 # modifiziert Montag, 27. Juli 2015 13:04 von Leander Jedamus
 # modifiziert Samstag, 25. Juli 2015 20:43 von Leander Jedamus
@@ -39,9 +39,11 @@ droid = android.Android()
  
 handler1 = logging.StreamHandler(sys.stdout)
 handler2 = logging.FileHandler("myapp.log","w","utf-8",True)
-7
+
+logging.Formatter.converter=time.gmtime
 frm = logging.Formatter("%(asctime)s %(name)s %(levelname)s: %(message)s",
-                        "%d.%m.%Y %H:%M:%S")
+                        "%d.%m.%Y %H:%M:%S %Z")
+
 handler1.setFormatter(frm)
 handler2.setFormatter(frm)
 
