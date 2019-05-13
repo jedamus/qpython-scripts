@@ -2,7 +2,7 @@
 #qpy:3
 #qpy:console
 # erzeugt Mittwoch, 22. Juli 2015 17:05 von Leander Jedamus
-# modifiziert Montag, 13. Mai 2019 12:22 von Leander Jedamus
+# modifiziert Montag, 13. Mai 2019 12:30 von Leander Jedamus
 # modifiziert Mittwoch, 01. Mai 2019 01:51 von Leander Jedamus
 # modifiziert Montag, 27. Juli 2015 13:04 von Leander Jedamus
 # modifiziert Samstag, 25. Juli 2015 20:43 von Leander Jedamus
@@ -41,6 +41,9 @@ handler1 = logging.StreamHandler(sys.stdout)
 handler2 = logging.FileHandler("myapp.log","w","utf-8",True)
 
 logging.Formatter.converter=time.gmtime
+logging._srcFile=None
+logging.logThreads=0
+logging.logProcesses=0
 frm = logging.Formatter("%(asctime)s %(name)s %(levelname)s: %(message)s",
                         "%d.%m.%Y %H:%M:%S %Z")
 
