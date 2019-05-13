@@ -2,7 +2,7 @@
 #qpy:3
 #qpy:console
 # erzeugt Mittwoch, 22. Juli 2015 17:05 von Leander Jedamus
-# modifiziert Montag, 13. Mai 2019 10:06 von Leander Jedamus
+# modifiziert Montag, 13. Mai 2019 12:22 von Leander Jedamus
 # modifiziert Mittwoch, 01. Mai 2019 01:51 von Leander Jedamus
 # modifiziert Montag, 27. Juli 2015 13:04 von Leander Jedamus
 # modifiziert Samstag, 25. Juli 2015 20:43 von Leander Jedamus
@@ -64,8 +64,9 @@ else:
     # write selected language into environment, so gettext knows,
     # what language to choose
     os.environ["LANG"] = short_languages[lang_index]
-    logger.debug("main: language = " + short_languages[lang_index]
-                 + " (" + languages[lang_index] + ")")
+    if logger.isEnabledFor(logging.DEBUG):
+      logger.debug("main: language = " + short_languages[lang_index]
+                   + " (" + languages[lang_index] + ")")
     
 scriptpath = os.path.abspath(os.path.dirname(sys.argv[0]))  
 try:
