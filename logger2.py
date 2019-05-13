@@ -2,12 +2,13 @@
 #-*-coding:utf8;-*-
 #qpy:2
 #qpy:console
-# modifiziert Montag, 13. Mai 2019 11:38 von Leander Jedamus
+# modifiziert Montag, 13. Mai 2019 13:39 von Leander Jedamus
 
 from __future__ import print_function
 import logging
 import logging.config
 import sys
+import time
 import atexit
 
 if sys.platform == "linux4":
@@ -18,6 +19,10 @@ logger = ""
 atexit.register(logging.shutdown)
 
 if __name__ == '__main__':
+  logging.Formatter.converter=time.gmtime
+  logging._srcFile=None
+  logging.logThreads=0
+  logging.logProcesses=0
   logging.config.fileConfig("logging.conf")
   #logging.config.dictConfig("logging.yaml")
 
@@ -26,7 +31,8 @@ if __name__ == '__main__':
   logger.critical("kritischer Zustand!")
   logger.warning ("eine Warnung")
   logger.info("dies ist eine Information.")
-  logger.debug("debug")
+  if logger.isEnabledFor(logging.DEBUG):
+    logger.debug("debug")
   logging.log(logging.ERROR, "Fehler!")
 
   logging.shutdown()
