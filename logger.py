@@ -2,6 +2,7 @@
 #-*-coding:utf8;-*-
 #qpy:2
 #qpy:console
+# modifiziert Montag, 13. Mai 2019 12:51 von Leander Jedamus
 
 from __future__ import print_function
 import logging
@@ -17,7 +18,9 @@ atexit.register(logging.shutdown)
 
 if __name__ == '__main__':
   handler1 = logging.StreamHandler(sys.stdout)
+  handler1.setLevel(logging.DEBUG)
   handler2 = logging.FileHandler("logger.log","w")
+  handler2.setLevel(logging.DEBUG)
   
   frm = logging.Formatter("%(asctime)s %(levelname)s: %(message)s",
                           "%d.%m.%Y %H:%M:%S")
