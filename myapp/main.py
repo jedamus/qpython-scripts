@@ -2,12 +2,16 @@
 #qpy:3
 #qpy:console
 # erzeugt Mittwoch, 22. Juli 2015 17:05 von Leander Jedamus
+# modifiziert Montag, 13. Mai 2019 05:24 von Leander Jedamus
 # modifiziert Mittwoch, 01. Mai 2019 01:51 von Leander Jedamus
 # modifiziert Montag, 27. Juli 2015 13:04 von Leander Jedamus
 # modifiziert Samstag, 25. Juli 2015 20:43 von Leander Jedamus
 # modifiziert Freitag, 24. Juli 2015 20:24 von Leander Jedamus
 # modifiziert Mittwoch, 22. Juli 2015 18:45 von Leander Jedamus
 
+from __future__ import print_function
+import atexit
+import logging
 import sys
 import os
 import gettext
@@ -15,21 +19,37 @@ import time
 from dialogs import ListDialog, YesNoDialog, t, Speaking, getEmailBody
 from xmls import xml
 
-speak = False
-
 try:
     import androidhelper as android
 except ImportError:
     import android
+
+os.chdir("/storage/emulated/0/com.hipipal.qpyplus/projects/myapp")
     
+logger = ""
+atexit.register(logging.shutdown)
+
 languages = ["English","Deutsch"]
 short_languages = ["en","de"]
         
 # create the droid
 droid = android.Android()
  
+#handler1 = logging.StreamHandler(sys.stdout)
+handler2 = logging.FileHandler("logger.log","w")
+
+frm = logging.Formatter("%(asctime)s %(levelname)s: %(message)s",
+                        "%d.%m.%Y %H:%M:%S")
+#handler1.setFormatter(frm)
+handler2.setFormatter(frm)
+
+logger = logging.getLogger()
+#logger.addHandler(handler1)
+logger.addHandler(handler2)
+logger.setLevel(logging.DEBUG)
+
 # user has to select language
-lang_index = ListDialog(droid,"Select language",languages,"Cancel")
+lang_index = ListDialog(droid,"Select language",logger,languages,"Cancel")
 if lang_index == None:
     sys.exit(0)
 else:
@@ -50,10 +70,10 @@ except IOError:
 
 # """
 
-speak = YesNoDialog(droid,speak,_("Text-to-speech?"),
+speak = YesNoDialog(droid,False,logger,_("Text-to-speech?"),
   _("Do you want speech output?"),_("Yes"),_("No"))
 
-response = YesNoDialog(droid,speak,_("Install Packages?"),
+response = YesNoDialog(droid,speak,logger,_("Install Packages?"),
 	 _("You may want to use WiFi for this."),
 	 _("Yes"),_("No"))
 if not response: sys.exit()
@@ -65,7 +85,7 @@ s2 = _("This should just take a moment.")
 droid.dialogCreateHorizontalProgress(s1,s2,10)
  
 # Render the dialog
-Speaking(droid,speak,s1,s2)
+Speaking(droid,speak,logger,s1,s2)
 droid.dialogShow()
  
 # Now do the installation, updating the progress bar along the way...
@@ -121,7 +141,7 @@ while True:
     if res['name'] == 'kill':
         resp = droid.fullQuery().result
         droid.fullDismiss()
-        send = YesNoDialog(droid,speak,_("Send as email?"),
+        send = YesNoDialog(droid,speak,logger,_("Send as email?"),
           _("Do you want to send data as email?"),
           _("Yes"),_("No"))
         editText1 = resp['editText1']
@@ -134,18 +154,18 @@ while True:
         telefon = resp['telefon']
         spinner1 = resp['spinner1']
         print("\n-----------------\n")
-        print(t(droid,speak,send,_("firstname:"),vorname['text']))
-        print(t(droid,speak,send,_("lastname:"),nachname['text']))
-        print(t(droid,speak,send,_("street:"),strasse['text']))
-        print(t(droid,speak,send,_("nr.:"),nr['text']))
-        print(t(droid,speak,send,_("postcode:"),plz['text']))
-        print(t(droid,speak,send,_("town:"),ort['text']))
-        print(t(droid,speak,send,_("telephone:"),telefon['text']))
+        print(t(droid,speak,logger,send,_("firstname:"),vorname['text']))
+        print(t(droid,speak,logger,send,_("lastname:"),nachname['text']))
+        print(t(droid,speak,logger,send,_("street:"),strasse['text']))
+        print(t(droid,speak,logger,send,_("nr.:"),nr['text']))
+        print(t(droid,speak,logger,send,_("postcode:"),plz['text']))
+        print(t(droid,speak,logger,send,_("town:"),ort['text']))
+        print(t(droid,speak,logger,send,_("telephone:"),telefon['text']))
         #print(spinner1)
         print("\n-----------------\n")
-        print(t(droid,speak,send,_("data:"),editText1['text']))
+        print(t(droid,speak,logger,send,_("data:"),editText1['text']))
         index = int(spinner1['selectedItemPosition'])
-        print(t(droid,speak,send,entries[index] + " = " +
+        print(t(droid,speak,logger,send,entries[index] + " = " +
         	  str(entryValues[index]) + " %"))
         print("\n-----------------\n")
         if send:

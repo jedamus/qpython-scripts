@@ -2,6 +2,7 @@
 #qpy:3
 #qpy:console
 # erzeugt Mittwoch, 22. Juli 2015 17:05 von Leander Jedamus
+# modifiziert Montag, 13. Mai 2019 05:25 von Leander Jedamus
 # modifiziert Montag, 27. Juli 2015 13:04 von Leander Jedamus
 # modifiziert Samstag, 25. Juli 2015 20:43 von Leander Jedamus
 # modifiziert Freitag, 24. Juli 2015 20:24 von Leander Jedamus
@@ -14,22 +15,29 @@ email = ""
 def getEmailBody():
     return email
 
-def t(droid,speak,send,*seq):
+def t(droid,speak,logger,send,*seq):
+  logger.debug("In dialogs.t")
   global email
   s = ' '.join(seq).encode('utf-8')
-  if speak: droid.ttsSpeak(s)
-  if send: email = email + s + "\n"
+  if speak:
+    droid.ttsSpeak(s)
+    logger.debug("speaking: " + s)
+  if send:
+    email = email + s + "\n"
   return s
   
-def Speaking(droid,speak,*seq):
+def Speaking(droid,speak,logger,*seq):
+    logger.debug("In dialogs.Speaking")
     if speak:
         t = 0
         for s in seq:
             time.sleep(t)
             droid.ttsSpeak(s)
+	    logger.debug("speaking: " + s)
             t = 1
 
-def ListDialog(droid,title,list,cancel="Cancel"):
+def ListDialog(droid,title,logger,list,cancel="Cancel"):
+    logger.debug("In dialogs.ListDialog")
     droid.dialogCreateAlert(title, '')
     droid.dialogSetItems(list)
     droid.dialogSetNegativeButtonText(cancel)
@@ -41,12 +49,14 @@ def ListDialog(droid,title,list,cancel="Cancel"):
     else:
         return None
     
-def YesNoDialog(droid,speak,title,question,yes,no):
+def YesNoDialog(droid,speak,logger,title,question,yes,no):
+    logger.debug("In dialogs.YesNoDialog")
     droid.dialogCreateAlert(title,question)
     droid.dialogSetPositiveButtonText(yes)
     droid.dialogSetNegativeButtonText(no)
-    Speaking(droid,speak,title,question)
+    Speaking(droid,speak,logger,title,question)
     droid.dialogShow()
     response = droid.dialogGetResponse().result
     droid.dialogDismiss()
     return ('which' in response) and (response['which'] == 'positive')
+
