@@ -8,7 +8,7 @@ import sys
 
 def get_datum(datum,ds):
     s = datum.strftime(ds)
-    if sys.platform == "linux4":
+    if sys.platform in ["linux4","ios"]:
       months = ["January", "February", "March", "April", "May",
                 "June", "July", "August", "September", "October",
                 "November", "December"]
