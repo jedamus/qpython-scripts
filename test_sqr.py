@@ -2,6 +2,7 @@
 #-*-coding:utf8;-*-
 #qpy:2
 #qpy:console
+# modifiziert Dienstag, 11. Juni 2019 16:23 von Leander Jedamus
 # modifiziert Mittwoch, 01. Mai 2019 01:01 von Leander Jedamus
 # erzeugt Dienstag, 30. April 2019 17:54 (C) 2019 von Leander Jedamus
 # modifiziert Dienstag, 30. April 2019 17:51 von Leander Jedamus
@@ -12,13 +13,14 @@ import os
 import unittest
 import sqr
 
+file = sys.stderr
 class SqrTest(unittest.TestCase):
 
   def setUp(self):
-    print('Erzeuge Testdaten. ', sep='', end='', file=sys.stderr)
+    print('Erzeuge Testdaten. ', sep='', end='', file=file)
   
   def tearDown(self):
-    print('Lösche Testdaten. ', sep='', end='', file=sys.stderr)
+    print('Lösche Testdaten. ', sep='', end='', file=file)
     try:
       os.remove('not_existing.txt')
     except: pass
@@ -44,7 +46,7 @@ if __name__ == '__main__':
   test1 = SqrTest('testBerechnung1')
   test2 = SqrTest('testBerechnung2')
   suite.addTests((test1, test2))
-  testrunner = unittest.TextTestRunner(verbosity=2, stream=sys.stderr)
+  testrunner = unittest.TextTestRunner(verbosity=2, stream=file)
   testrunner.run(suite)
   print("-" * 70)
   PrintAusgabe()
