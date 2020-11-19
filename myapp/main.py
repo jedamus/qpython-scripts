@@ -2,6 +2,7 @@
 #qpy:3
 #qpy:console
 # erzeugt Mittwoch, 22. Juli 2015 17:05 von Leander Jedamus
+# modifiziert Donnerstag, 19. November 2020 09:19 von Leander Jedamus
 # modifiziert Dienstag, 14. Mai 2019 01:00 von Leander Jedamus
 # modifiziert Montag, 13. Mai 2019 21:27 von Leander Jedamus
 # modifiziert Montag, 13. Mai 2019 21:16 von Leander Jedamus
@@ -64,7 +65,7 @@ else:
 scriptpath = os.path.abspath(os.path.dirname(sys.argv[0]))  
 try:
     trans = gettext.translation("myapp", \
-    	        os.path.join(scriptpath, "translate"),None,None,False,"utf-8")
+    	        os.path.join(scriptpath, "locale"),None,None,False,"utf-8")
     # trans.set_output_charset("utf-8")
     trans.install(unicode=True)
     

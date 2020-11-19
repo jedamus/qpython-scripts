@@ -2,6 +2,7 @@
 #qpy:3
 #qpy:console
 # erzeugt Mittwoch, 22. Juli 2015 17:05 von Leander Jedamus
+# modifiziert Donnerstag, 19. November 2020 09:19 von Leander Jedamus
 # modifiziert Freitag, 24. Juli 2015 20:24 von Leander Jedamus
 # modifiziert Mittwoch, 22. Juli 2015 18:45 von Leander Jedamus
 
@@ -78,7 +79,7 @@ os.environ["LANG"] = lang
 scriptpath = os.path.abspath(os.path.dirname(sys.argv[0]))  
 try:
     trans = gettext.translation("installer.py", \
-    	        os.path.join(scriptpath, "translate"))
+    	        os.path.join(scriptpath, "locale"))
     trans.install(unicode=True)
 except IOError:
     def _ (s):
